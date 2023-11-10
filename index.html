@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мои покупки</title>
+    <!-- Файл стилей -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Подключение иконочного шрифта -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <script src="js/app.js" defer></script>
+</head>
+
+<body>
+    <div class="wrapper">
+        <!-- Модальное окно для редактирования покупки -->
+        <div id="editModalPopup">
+            <div id="closeWindow">X</div>
+            <div class="box-form">
+                <div class="box-input">
+                    <i class='bx bxs-basket' ></i>
+                    <input
+                        type="text"
+                        id="editProduct"
+                        value=""
+                    >
+                </div>
+                <div class="box-input">
+                    <i class='bx bxs-wallet'></i>
+                    <input
+                        type="number"
+                        id="editPrice"
+                        value=""
+                    >
+                </div>
+                <button
+                    type="submit"
+                    id="updatePurchase"
+                >
+                    обновить
+                </button>
+            </div>
+        </div>
+        <h1>Список покупок</h1>
+        <!-- Форма ввода -->
+        <div class="box-form">
+            <div class="box-input">
+                <i class='bx bxs-basket' ></i>
+                <input
+                    type="text"
+                    id="product"
+                    placeholder="Наименование товара"
+                >
+            </div>
+            <div class="box-input">
+                <i class='bx bxs-wallet'></i>
+                <input
+                    type="number"
+                    id="price"
+                    placeholder="Цена товара"
+                >
+            </div>
+            <button
+                type="submit"
+                id="createBtn"
+            >
+                Добавить
+            </button>
+        </div>
+        <!-- Список покупок -->
+        <ul 
+            class="listShoping"
+            id="listShoping"
+        >
+        </ul>
+        <div class="stat">
+            <div id="summPlannedProduct"></div>
+            
+            <div id="summAcquiredProduct"></div>
+        </div>
+    </div>
+</body>
+
+</html>
